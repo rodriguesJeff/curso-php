@@ -15,6 +15,11 @@ $contas = [
     ],
 ];
 
+$contas[44444444444] = [
+    'titular' => 'Emilly',
+    'saldo' => 50000,
+];
+
 foreach ($contas as $cpf => $conta) {
     echo "Conta do " . $conta['titular'] . "\n";
     echo "Saldo: R\$ " . $conta['saldo'] . "\n";
