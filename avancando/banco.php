@@ -32,6 +32,8 @@ $contas[22222222222] = depositar(
     40
 );
 
+titularComLetrasMaiusculas($contas[11111111111]);
+
 foreach ($contas as $cpf => $conta) {
     echo "Conta do $conta[titular]\n";
     echo "Saldo: R\$ {$conta['saldo']}\n";
