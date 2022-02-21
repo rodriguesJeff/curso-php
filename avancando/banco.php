@@ -53,8 +53,8 @@ $contas[22222222222] = depositar(
 );
 
 foreach ($contas as $cpf => $conta) {
-    echo "Conta do " . $conta['titular'] . "\n";
-    echo "Saldo: R\$ " . $conta['saldo'] . "\n";
-    echo "CPF do cliente: " . $cpf . "\n";
+    echo "Conta do $conta[titular]\n";
+    echo "Saldo: R\$ {$conta['saldo']}\n";
+    echo "CPF do cliente: $cpf\n";
     echo "\n";
 } 
