@@ -34,11 +34,34 @@ $contas[22222222222] = depositar(
 
 titularComLetrasMaiusculas($contas[11111111111]);
 
-unset($contas[33333333333]);
+// unset($contas[33333333333]);
 
-foreach ($contas as $cpf => $conta) {
-    echo "Conta do $conta[titular]\n";
-    echo "Saldo: R\$ {$conta['saldo']}\n";
-    echo "CPF do cliente: $cpf\n";
-    echo "\n";
-} 
+// foreach ($contas as $cpf => $conta) {
+//     echo "Conta do $conta[titular] <br>";
+//     echo "Saldo: R\$ {$conta['saldo']} <br>";
+//     echo "CPF do cliente: $cpf <br>";
+//     echo "<br>";
+// } 
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Contas Correntes</h1>
+    <dl>
+        <?php foreach($contas as $cpf => $conta) {?>}
+            <dt>
+                <h3><?= $conta['titular']; ?> - <?= $cpf; ?></h3>
+            </dt>
+            <dd>Saldo: <?= $conta['saldo']; ?></dd>
+        <?php } ?>
+    </dl>
+</body>
+</html>
